@@ -1,6 +1,13 @@
 import { pokemon } from './pokemondata.js'
 
-
+fetch ('link')
+  .then(function(response) {
+    return response.json();
+  })
+  .then (function(myJson) {
+    console.log(myJson);
+    createPokeCard(myJson)
+  });
 
 //var card = document.querySelector('.card');
 // card.addEventListener( 'mouseover', function() {
