@@ -1,7 +1,7 @@
 import { pokemon } from './pokemondata.js'
 
 pokemon.forEach((singleMon) => {
-  fetch ('singleMon.url')
+  fetch (singleMon.url)
   .then(function(response) {
     return response.json();
   })
@@ -23,12 +23,16 @@ const mainContainer = document.querySelector('.container')
 
 function createPokeCard(pokecard) {
   let card = document.createElement('div')
+
+  // let name = document.createElement('p')
   let caption = document.createElement('figcaption')
+
   let image = document.createElement('img')
 
   name.textContent = pokecard.name
   image.src = pokecard.sprites.front_default
-  card.appendChild(name)
+  // card.appendChild(name)
+  card.appendChild(caption)
   card.appendChild(image)
   
   mainContainer.appendChild(card)
