@@ -1,10 +1,10 @@
-import { pokemon } from './pokemondata.js'
+import { pokemon } from './myPokeData.js'
 
 pokemon.forEach((singleMon) => {
-  fetch (singleMon.url)
+  fetch (singleMon.name[0]
   .then(function(response) {
     return response.json();
-  })
+  }))
   .then (function(myJson) {
     console.log(myJson);
     createPokeCard(myJson)
