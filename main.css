@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 body { font-family: sans-serif; }
 
 .scene {
@@ -41,3 +47,58 @@ body { font-family: sans-serif; }
   background: blue;
   transform: rotateY(180deg);
 }
+
+  figure {
+      max-width: 200px;
+  }
+  
+  .figure-pic {
+    width: 100%;
+    max-height: 200px;
+  }
+  
+figcaption {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #9BBFAB;
+    position: fixed;
+    width: 100%;
+  }
+
+  nav ul li {
+    justify-content: space-between;
+    list-style: none;
+    padding: 20px 40px;
+  }
+
+  nav ul li a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #04195e;
+    text-decoration: none;
+  }
+
+  #projects {
+    text-align: center;
+    background-color: #F2EFDF;
+  }
+
+  .project-tiles {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    #navbar {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+  }
