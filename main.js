@@ -1,4 +1,4 @@
-import { pokemon } from './myPokeData.js'
+import { pokemon } from './pokemon.js/index.js'
 
 pokemon.forEach((singleMon) => {
   fetch (singleMon.name[0])
