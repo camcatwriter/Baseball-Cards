@@ -63,6 +63,12 @@ figcaption {
     text-align: center;
   }
 
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
   #navbar {
     display: flex;
     justify-content: flex-end;
