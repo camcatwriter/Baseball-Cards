@@ -17,13 +17,14 @@ console.log(pokemon)
 
 const mainContainer = document.querySelector('.container')
 
-function createPokeCard(pokedata) {
+function createPokeCard(pokeData) {
   let card = document.createElement('div')
   let name = document.createElement('p')
   let image = document.createElement('img')
 
-  name.textContent = pokedata.name
-  image.src = pokedata.sprites.front_default
+  let upperName = pokeData.name.charAt(0).toUpperCase() + pokeData.name.slice(1)
+  name.textContent = upperName
+  image.src = pokeData.sprites.front_default
   card.appendChild(name)
   card.appendChild(image)
   mainContainer.appendChild(card)
