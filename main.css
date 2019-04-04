@@ -108,3 +108,14 @@ figcaption {
     align-items: center;
     }
   }
+
+  .backImage {
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0.25;
+  }
+
+  .infoDiv {
+    position: relative;
+  }
