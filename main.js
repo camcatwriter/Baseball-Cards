@@ -1,5 +1,12 @@
 import { pokemon } from './pokemon.js'
 
+class Pokemon {
+  constructor (name) {
+    this.id = 0,
+    this.name = name
+  }
+}
+
 pokemon.forEach((singleMon) => {
   fetch(singleMon.url)
   .then(function(response) {
@@ -26,9 +33,22 @@ function createPokeCard(pokeData) {
 
   let upperName = pokeData.name.charAt(0).toUpperCase() + pokeData.name.slice(1)
   name.textContent = upperName
-  image.src = `../images/${pokeData.id}${upperName}.png`
+  if(pokeData.id !==0) {
+    image.src = '../images/${pokeData.id}${upperName}.png'
+  } else {
+    image.src = '../images/pokeball.png'
+  }
+ 
   figure.appendChild(image)
   figure.appendChild(name)
   card.appendChild(figure)
   mainContainer.appendChild(card)
 }
+
+const pokemonButtonOne = document.querySelector('button')
+
+pokemonButtonOne.addEventListener('click', function() {
+  let newPokemonName = prompt("Enter a new Pokemon name")
+  createPokeCard(new Pokemon(newPokemonName))
+})
+
