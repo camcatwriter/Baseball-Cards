@@ -33,11 +33,11 @@ function createPokeCard(pokeData) {
 
   let upperName = pokeData.name.charAt(0).toUpperCase() + pokeData.name.slice(1)
   name.textContent = upperName
-  if(pokeData.id !==0) {
-    image.src = '../images/${pokeData.id}${upperName}.png'
-  } else {
-    image.src = '../images/pokeball.png'
-  }
+  // if(pokeData.id !==0) {
+  //   image.src = '../images/${pokeData.id}${upperName}.png'
+  // } else {
+  //   image.src = '../images/pokeball.png'
+  // }
  
   figure.appendChild(image)
   figure.appendChild(name)
@@ -46,9 +46,13 @@ function createPokeCard(pokeData) {
 }
 
 const pokemonButtonOne = document.querySelector('button')
+// const pokemonButtonTwo = document.querySelector('button2')
 
 pokemonButtonOne.addEventListener('click', function() {
   let newPokemonName = prompt("Enter a new Pokemon name")
   createPokeCard(new Pokemon(newPokemonName))
 })
 
+// pokemonButtonTwo.addEventListener('click', function() {
+//   let newPokemonName = prompt("Enter a new Pokemon name")
+// })

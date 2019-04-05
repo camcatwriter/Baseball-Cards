@@ -26,6 +26,10 @@ nav ul li a:hover {
   color: #7b84d6;
 }
 
+header {
+  padding-top: 85px;
+}
+
   figure {
       max-width: 200px;
   }
