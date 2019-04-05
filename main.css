@@ -41,6 +41,10 @@ figcaption {
     text-align: center;
   }
 
+  img {
+    width: 200px;
+  }
+
   .container {
     padding-top: 100px;
     display: flex;
