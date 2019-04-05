@@ -66,11 +66,8 @@ figcaption {
   .infoDiv {
     position: relative;
   }
-
-
-
-
-  /* .scene {
+  
+  .scene {
     width: 200px;
     height: 260px;
     border: 1px solid #CCC;
@@ -85,9 +82,9 @@ figcaption {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
-  } */
+  }
 
-  /* .card.is-flipped {
+  .card.is-flipped {
     transform: rotateY(180deg);
   }
   
@@ -110,4 +107,4 @@ figcaption {
   .card__face--back {
     background: blue;
     transform: rotateY(180deg);
-  } */
+  }
