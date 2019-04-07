@@ -16,17 +16,9 @@ pokemon.forEach((singleMon) => {
   })
   .then(function(myJson) {
     // console.log(myJson) ;
-    createPokeCard(matchIdToImage(myJson))
+    createPokeCard((myJson))
   })
 })
-
-function cardFront(pokeData) {
-  let cardFront = document.createElement('div')
-  cardFront.className = 'card_face'
-  let figure = document.createElement('figure')
-  let name = document.createElement('figcaption')
-  let image = document.createElement('img')
-}
 
 function createPokeCard(pokeData) {
   console.log (pokeData.id)
@@ -45,8 +37,15 @@ function createPokeCard(pokeData) {
  
   figure.appendChild(image)
   figure.appendChild(name)
-  cardFront.appendChild(figure)
   mainContainer.appendChild(card)
+}
+
+function cardFront(pokeData) {
+  let cardFront = document.createElement('div')
+  cardFront.className = 'card_face'
+  let figure = document.createElement('figure')
+  let name = document.createElement('figcaption')
+  let image = document.createElement('img')
 }
 
 const pokemonButtonOne = document.querySelector('button')
