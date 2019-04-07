@@ -70,7 +70,7 @@ const pokemonButtonOne = document.querySelector('button')
 
 pokemonButtonOne.addEventListener('click', function() {
   let newPokemonName = prompt("Enter a new Pokemon name")
-  createPokeCard(new Pokemon(newPokemonName))
+  createPokeCard(matchIdToImage(new Pokemon(newPokemonName)))
 })
 
 // pokemonButtonTwo.addEventListener('click', function() {
