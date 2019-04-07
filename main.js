@@ -20,6 +20,23 @@ pokemon.forEach((singleMon) => {
   })
 })
 
+function matchIdToImage(aPokemon) {
+  if(aPokemon.id ===0) {
+    aPokemon.imageID = 0
+  }
+  if(aPokemon.id < 10) {
+    aPokemon.imageID = "00" + aPokemon.id
+  }
+  if(aPokemon.id > 9 && aPokemon.id < 100 ) {
+    aPokemon.imageID = "0" + aPokemon.id
+  }
+  if(aPokemon.id > 99) {
+    aPokemon.imageID = aPokemon.id
+  }
+  aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1)
+  return aPokemon
+}
+
 function createPokeCard(pokeData) {
   console.log (pokeData.id)
   let card = document.createElement('div')
@@ -46,6 +63,8 @@ function cardFront(pokeData) {
   let figure = document.createElement('figure')
   let name = document.createElement('figcaption')
   let image = document.createElement('img')
+
+  
 }
 
 const pokemonButtonOne = document.querySelector('button')
