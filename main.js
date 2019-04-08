@@ -8,8 +8,10 @@ function cardFront(pokeData) {
   let figure = document.createElement('figure')
   let name = document.createElement('figcaption')
   let image = document.createElement('img') 
-  
+
+  let upperName = pokeData.name
   name.textContent = upperName
+
   if(pokeData.id !==0) {
     image.src = '../images/${pokeData.id}${upperName}.png'
   } else {
@@ -21,6 +23,7 @@ function cardFront(pokeData) {
   cardFront.appendChild(figure)
   return cardFront
 }
+
 
 function cardBackInfo(pokeData) {
   let infoDiv = document.createElement('div')
@@ -95,6 +98,7 @@ function matchIdToImage(aPokemon) {
   }
   aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1)
   return aPokemon
+
 }
 
 function fetchExistingPokemon(id) {
