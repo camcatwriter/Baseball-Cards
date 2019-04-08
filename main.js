@@ -11,11 +11,11 @@ function cardFront(pokeData) {
 
   name.textContent = pokeData.name
 
-  if(pokeData.id !==0) {
-    image.src = '../images/${pokeData.imageID}${pokeData.name}.png'
-  } else {
-    image.src = '../images/pokeball.png'
-  }
+  if(pokeData.id !== 0) {
+    image.src = `../images/${pokeData.imageID}${pokeData.name}.png`
+} else {
+    image.src = `../images/pokeball.png`
+}
 
   figure.appendChild(image)
   figure.appendChild(name)
