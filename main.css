@@ -106,11 +106,10 @@ figcaption {
     backface-visibility: hidden;
   }
   
-  .card__face--front {
-    background: red;
-  }
-  
+  /* .card__face--front {
+    
+  } */
+
   .card__face--back {
-    background: blue;
     transform: rotateY(180deg);
   }
