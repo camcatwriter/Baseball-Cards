@@ -124,3 +124,7 @@ figcaption {
     z-index: -1;
   }
   
+  .infoDiv {
+    text-align: center;
+    padding-top: 5.25rem;
+  }
