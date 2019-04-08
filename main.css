@@ -51,8 +51,12 @@ figcaption {
     text-align: center;
   }
 
-  img {
+  .card_face img {
     width: 200px;
+  }
+
+  .infoDiv {
+    
   }
 
   .container {
@@ -65,8 +69,9 @@ figcaption {
   .backImage {
     top: 0;
     left: 0;
+    width: 200px;
     position: absolute;
-    opacity: 0.25;
+    opacity: 0.7;
   }
   
   .scene {
@@ -83,6 +88,11 @@ figcaption {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    border: yellow;
+  }
+
+  .card img {
+    height: 260px;
   }
 
   .card.is-flipped {
@@ -94,16 +104,18 @@ figcaption {
     width: 100%;
     height: 100%;
     line-height: 260px;
-    color: white;
+    background-color: white;
     text-align: center;
     font-weight: bold;
     font-size: 40px;
     backface-visibility: hidden;
   }
   
-  /* .card__face--front {
-    
-  } */
+  .card__face--front {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+  }
 
   .card__face--back {
     transform: rotateY(180deg);
