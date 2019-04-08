@@ -86,6 +86,11 @@ figcaption {
 
   .card img {
     height: 260px;
+    width: 200px;
+  }
+
+  .pokemon_image {
+    display: none;
   }
 
   .card.is-flipped {

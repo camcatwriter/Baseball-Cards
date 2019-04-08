@@ -3,23 +3,24 @@ import { pokemon } from './pokemon.js'
 const mainContainer = document.querySelector('.container')
 
 function cardFront(pokeData) {
-//   let cardFront = document.createElement('div')
-//   cardFront.className = 'card_ face card_face--front'
-//   let figure = document.createElement('figure')
-//   let name = document.createElement('figcaption')
-//   let image = document.createElement('img') 
+  let cardFront = document.createElement('div')
+  cardFront.className = 'card_ face card_face--front'
+  let figure = document.createElement('figure')
+  let name = document.createElement('figcaption')
+  let image = document.createElement('img') 
+  image.className = 'pokemon_image' + pokeData.name
 
-//   name.textContent = pokeData.name
+  name.textContent = pokeData.name
 
-//   if(pokeData.id !== 0) {
-//     image.src = `../images/${pokeData.imageID}${pokeData.name}.png`
-// } else {
-//     image.src = `../images/pokeball.png`
-// }
+  if(pokeData.id !== 0) {
+    image.src = `../images/${pokeData.imageID}${pokeData.name}.png`
+} else {
+    image.src = `../images/pokeball.png`
+}
 
-//   figure.appendChild(image)
-//   figure.appendChild(name)
-//   cardFront.appendChild(figure)
+  figure.appendChild(image)
+  figure.appendChild(name)
+  cardFront.appendChild(figure)
   return cardFront
 }
 
@@ -60,10 +61,17 @@ function createPokeCard(pokeData) {
   let card = document.createElement('div')
   card.className = 'card'
 
-  // card.appendChild(cardFront(pokeData))
+  card.appendChild(cardFront(pokeData))
   card.appendChild(cardBack(pokeData))
   
-  card.addEventListener( 'click', function() {
+  card.addEventListener( 'click', function(event) {
+    console.log(event.target);
+    if (event.target.style.display == "none"){
+      event.target.style.display = "block";
+    } else {
+      event.target.style.display = "none"
+    }
+//  event.target.style.display= event.target.style.display != "none" ? "none" : "block";
     card.classList.toggle('is-flipped');
   })
 
