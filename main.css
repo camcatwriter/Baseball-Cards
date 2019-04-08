@@ -2,12 +2,6 @@
   margin: 0;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 body { font-family: sans-serif; }
 
 #navbar {
@@ -36,6 +30,12 @@ header {
   padding-top: 85px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
   figure {
       max-width: 200px;
   }
@@ -53,10 +53,6 @@ figcaption {
 
   .card_face img {
     width: 200px;
-  }
-
-  .infoDiv {
-    
   }
 
   .container {
