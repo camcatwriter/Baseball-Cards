@@ -108,3 +108,7 @@ figcaption {
   .card__face--back {
     transform: rotateY(180deg);
   }
+
+  .card__face--back p {
+    text-align: center;
+  }
