@@ -100,7 +100,7 @@ function matchIdToImage(aPokemon) {
 
 }
 
-function fetchExistingPokemon(id) {
+function fetchSinglePokemon(id) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
   .then(function(response) {
     return response.json()
@@ -121,15 +121,3 @@ var card = document.querySelector('.card');
 card.addEventListener('click', function() {
   card.classList.toggle('is-flipped');
 });
-
-const pokemonButtonOne = document.querySelector('button')
-// const pokemonButtonTwo = document.querySelector('button2')
-
-pokemonButtonOne.addEventListener('click', function() {
-  let newPokemonName = prompt("Enter a new Pokemon name")
-  createPokeCard(matchIdToImage(new Pokemon(newPokemonName)))
-})
-
-// pokemonButtonTwo.addEventListener('click', function() {
-//   let newPokemonName = prompt("Enter a new Pokemon name")
-// })
