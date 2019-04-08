@@ -53,6 +53,7 @@ figcaption {
 
   .card_face img {
     width: 200px;
+    background-color: aliceblue;
   }
 
   .container {
@@ -62,17 +63,9 @@ figcaption {
     justify-content: space-around;
   }
 
-  .backImage {
-    top: 0;
-    left: 0;
-    width: 200px;
-    position: absolute;
-    opacity: 0.7;
-  }
+/* .card__face .card__face--back {
   
-.card__face .card__face--back {
-  
-}
+} */
 
   .scene {
     width: 200px;
@@ -121,3 +114,13 @@ figcaption {
     transform: rotateY(180deg);
     text-align: center;
   }
+
+  .backImage {
+    top: 0;
+    left: 0;
+    width: 200px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+  }
+  
