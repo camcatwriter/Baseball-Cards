@@ -9,11 +9,10 @@ function cardFront(pokeData) {
   let name = document.createElement('figcaption')
   let image = document.createElement('img') 
 
-  let upperName = pokeData.name
-  name.textContent = upperName
+  name.textContent = pokeData.name
 
   if(pokeData.id !==0) {
-    image.src = '../images/${pokeData.id}${upperName}.png'
+    image.src = '../images/${pokeData.imageID}${pokeData.name}.png'
   } else {
     image.src = '../images/pokeball.png'
   }
