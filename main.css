@@ -70,6 +70,10 @@ figcaption {
     opacity: 0.7;
   }
   
+.card__face .card__face--back {
+  
+}
+
   .scene {
     width: 200px;
     height: 260px;

@@ -48,8 +48,8 @@ function cardBack(pokeData) {
   backImage.className = 'backImage'
   backImage.src = `../images/pokecardBack.png`
   cardBack.className = 'card_face card_face--back'
-  cardBack.appendChild(backImage)
   cardBack.appendChild(cardBackInfo(pokeData))
+  cardBack.appendChild(backImage)
   return cardBack
 }
 
