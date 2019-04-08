@@ -27,7 +27,7 @@ function cardFront(pokeData) {
 
 function cardBackInfo(pokeData) {
   let infoDiv = document.createElement('div')
-  infoDiv.className = 'infoDiv'
+  infoDiv.className = 'card_face--back'
   let moveOne = document.createElement('p')
   let moveTwo = document.createElement('p')
   let moveThree = document.createElement('p')
@@ -84,7 +84,7 @@ pokemon.forEach((singleMon) => {
 })
 
 function matchIdToImage(aPokemon) {
-  if(aPokemon.id ===0) {
+  if(aPokemon.id === 0) {
     aPokemon.imageID = 0
   }
   if(aPokemon.id < 10) {
