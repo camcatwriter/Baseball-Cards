@@ -114,6 +114,11 @@ class Pokemon {
   }
 }
 
+var card = document.querySelector('.card');
+card.addEventListener('click', function() {
+  card.classList.toggle('is-flipped');
+});
+
 const pokemonButtonOne = document.querySelector('button')
 // const pokemonButtonTwo = document.querySelector('button2')
 
