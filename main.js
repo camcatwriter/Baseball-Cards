@@ -4,7 +4,7 @@ const mainContainer = document.querySelector('.container')
 
 function cardFront(pokeData) {
   let cardFront = document.createElement('div')
-  cardFront.className = 'card_ face'
+  cardFront.className = 'card_ face--front'
   let figure = document.createElement('figure')
   let name = document.createElement('figcaption')
   let image = document.createElement('img') 

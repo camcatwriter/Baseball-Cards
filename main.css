@@ -81,6 +81,7 @@ figcaption {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    backface-visibility: hidden;
   }
 
   .card img {
@@ -112,11 +113,13 @@ figcaption {
     width: 200px;
     height: 200px;
     opacity: 1;
+    backface-visibility: hidden;
   }
 
   .card__face--back {
     transform: rotateY(180deg);
     text-align: center;
+    backface-visibility: hidden;
   }
 
   .backImage {
@@ -131,4 +134,5 @@ figcaption {
   .infoDiv {
     text-align: center;
     padding-top: 5.25rem;
+    position: absolute;
   }
