@@ -64,14 +64,7 @@ function createPokeCard(pokeData) {
   card.appendChild(cardFront(pokeData))
   card.appendChild(cardBack(pokeData))
   
-  card.addEventListener( 'click', function(event) {
-    console.log(event.target);
-    if (event.target.style.display == "none"){
-      event.target.style.display = "block";
-    } else {
-      event.target.style.display = "none"
-    }
-//  event.target.style.display= event.target.style.display != "none" ? "none" : "block";
+  card.addEventListener( 'click', function() {
     card.classList.toggle('is-flipped');
   })
 
