@@ -81,7 +81,6 @@ figcaption {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
-    border: yellow;
   }
 
   .card img {
