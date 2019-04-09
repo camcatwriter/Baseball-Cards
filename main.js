@@ -4,7 +4,7 @@ const mainContainer = document.querySelector('.container')
 
 function cardFront(pokeData) {
   let cardFront = document.createElement('div')
-  cardFront.className = 'card_ face card_face--front'
+  cardFront.className = 'card_ face'
   let figure = document.createElement('figure')
   let name = document.createElement('figcaption')
   let image = document.createElement('img') 
@@ -72,13 +72,15 @@ function createPokeCard(pokeData) {
   mainContainer.appendChild(scene)
 }
 
+const allFetchedPokemon = []
+
 pokemon.forEach((singleMon) => {
   fetch(singleMon.url)
   .then(function(response) {
     return response.json();
   })
   .then(function(myJson) {
-    // console.log(myJson) ;
+    allFetchedPokemon.push(myJson)
     createPokeCard(matchIdToImage(myJson))
   })
 })
@@ -140,7 +142,7 @@ class Pokemon {
 }
 
 newPokemonButton.addEventListener('click', function() {
-  createPokeCard(matchIdToImage(new Pokemon('Best Pokemon Ever'))
+  createPokeCard(matchIdToImage(new Pokemon('Best Pokemon Ever')))
 }
 )
 
