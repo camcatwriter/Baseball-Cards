@@ -115,8 +115,34 @@ class Pokemon {
   constructor (name) {
     this.id = 0,
     this.name = name
+    this.moves = [
+      {
+        move: {
+          name: "X",
+        },
+      },
+      {
+        move: {
+          name: "X",
+        },
+      },{
+        move: {
+          name: "X",
+        },
+      },{
+        move: {
+          name: "X",
+        },
+      },
+      
+    ]
   }
 }
+
+newPokemonButton.addEventListener('click', function() {
+  createPokeCard(matchIdToImage(new Pokemon('Best Pokemon Ever'))
+}
+)
 
 var card = document.querySelector('.card');
 card.addEventListener('click', function() {
