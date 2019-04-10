@@ -29,6 +29,17 @@ nav ul li a:hover {
 
 header {
   padding-top: 85px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: aliceblue;
+  padding-bottom: 20px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+header p {
+  text-align: center;
 }
 
 main {
@@ -51,6 +62,7 @@ figcaption {
     font-size: 1.5rem;
     text-align: center;
     backface-visibility: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   .card_face img {
@@ -134,10 +146,12 @@ figcaption {
   
   .infoDiv {
     text-align: center;
-    padding-top: 5.25rem;
+    /* padding-top: 5.25rem; */
     position: absolute;
-    bottom: 80px;
-    right: 70px;
+    bottom: 90px;
+    right: 60px;
     transform: rotateY(180deg);
-
+    text-emphasis: bold;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
   }
