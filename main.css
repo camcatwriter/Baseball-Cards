@@ -54,7 +54,7 @@ figcaption {
 
   .card_face img {
     width: 200px;
-    background-color: aliceblue;
+    background-color: white;
   }
 
   .container {
@@ -88,6 +88,7 @@ figcaption {
 
   .pokemon_image {
     display: none;
+    backface-visibility: hidden;
   }
 
   .card.is-flipped {
@@ -110,7 +111,6 @@ figcaption {
   .card__face--front {
     width: 200px;
     height: 200px;
-    opacity: 1;
     backface-visibility: hidden;
   }
 
