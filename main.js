@@ -56,8 +56,6 @@ function cardBack(pokeData) {
 
 function createPokeCard(pokeData) {
   console.log (pokeData.id)
-  let scene = document.createElement('div')
-  scene.className = 'scene'
   let card = document.createElement('div')
   card.className = 'card'
 
@@ -68,8 +66,7 @@ function createPokeCard(pokeData) {
     card.classList.toggle('is-flipped');
   })
 
-  scene.appendChild(card)
-  mainContainer.appendChild(scene)
+  mainContainer.appendChild(card)
 }
 
 const allFetchedPokemon = []
