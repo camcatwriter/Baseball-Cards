@@ -49,6 +49,7 @@ figcaption {
     font-weight: bold;
     font-size: 1.5rem;
     text-align: center;
+    backface-visibility: hidden;
   }
 
   .card_face img {
@@ -110,7 +111,7 @@ figcaption {
     width: 200px;
     height: 200px;
     opacity: 1;
-    /* backface-visibility: hidden; */
+    backface-visibility: hidden;
   }
 
   .card__face--back {
@@ -126,6 +127,7 @@ figcaption {
     position: absolute;
     opacity: 0.5;
     z-index: -1;
+
   }
   
   .infoDiv {
