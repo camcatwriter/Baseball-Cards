@@ -110,6 +110,10 @@ function fetchSinglePokemon(id) {
   })
 }
 
+retrivePokemonButton.addEventListener('click', function() {
+  fetchSinglePokemon()
+})
+
 class Pokemon {
   constructor (name) {
     this.id = 0,
