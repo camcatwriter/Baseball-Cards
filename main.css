@@ -103,7 +103,7 @@ figcaption {
     text-align: center;
     font-weight: bold;
     font-size: 40px;
-    /* backface-visibility: hidden; */
+    backface-visibility: hidden;
   }
   
   .card__face--front {
@@ -116,7 +116,7 @@ figcaption {
   .card__face--back {
     transform: rotateY(180deg);
     text-align: center;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
   }
 
   .backImage {
