@@ -91,6 +91,7 @@ figcaption {
 
   .card.is-flipped {
     transform: rotateY(180deg);
+    backface-visibility: unset
   }
   
   .card__face {
@@ -102,14 +103,14 @@ figcaption {
     text-align: center;
     font-weight: bold;
     font-size: 40px;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
   }
   
   .card__face--front {
     width: 200px;
     height: 200px;
     opacity: 1;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
   }
 
   .card__face--back {
@@ -130,5 +131,5 @@ figcaption {
   .infoDiv {
     text-align: center;
     padding-top: 5.25rem;
-    position: absolute;
+    /* position: absolute; */
   }

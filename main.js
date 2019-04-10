@@ -117,20 +117,20 @@ class Pokemon {
     this.moves = [
       {
         move: {
-          name: "X",
+          name: "secretive",
         },
       },
       {
         move: {
-          name: "X",
+          name: "mysterious",
         },
       },{
         move: {
-          name: "X",
+          name: "hidden",
         },
       },{
         move: {
-          name: "X",
+          name: "discreet",
         },
       },
       
@@ -139,7 +139,7 @@ class Pokemon {
 }
 
 newPokemonButton.addEventListener('click', function() {
-  createPokeCard(matchIdToImage(new Pokemon('Best Pokemon Ever')))
+  createPokeCard(matchIdToImage(new Pokemon('[redacted]')))
 }
 )
 
