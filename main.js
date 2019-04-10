@@ -25,6 +25,7 @@ function cardFront(pokeData) {
 }
 
 
+
 function cardBackInfo(pokeData) {
   let infoDiv = document.createElement('div')
   infoDiv.className = 'infoDiv card_face card_face--back'
@@ -41,20 +42,25 @@ function cardBackInfo(pokeData) {
   infoDiv.appendChild(moveThree)
   infoDiv.appendChild(moveFour)
   return infoDiv
+  
 }
 
+// let paragraph = infoDiv
+
 function cardBack(pokeData) {
+  let cardinfo = cardBackInfo(pokeData)
   let cardBack = document.createElement('div')
   let backImage = document.createElement('img')
   backImage.className = 'backImage card_face card_face--back'
   backImage.src = `../images/pokecardBack.png`
   cardBack.className = 'card_face card_face--back'
-  cardBack.appendChild(cardBackInfo(pokeData))
+  // paragraph = document.querySelector('.infoDiv card_face card_face--back')
+  cardBack.appendChild(cardinfo)
   cardBack.appendChild(backImage)
   return cardBack
 }
-
-function createPokeCard(pokeData) {
+// console.log(paragraph)
+function createPokeCard(pokeData){
   console.log (pokeData.id)
   let card = document.createElement('div')
   card.className = 'card'
@@ -110,8 +116,13 @@ function fetchSinglePokemon(id) {
   })
 }
 
-retrivePokemonButton.addEventListener('click', function() {
-  fetchSinglePokemon()
+
+let retrievedPokemonButton = document.getElementById("fetchOriginalPokemon")
+console.log(retrievedPokemonButton)
+retrievedPokemonButton.addEventListener('click', function() {
+  
+    let pokemonID = prompt('Enter an ID of an existing pokemon:')
+    fetchSinglePokemon(pokemonID)
 })
 
 class Pokemon {
@@ -141,13 +152,12 @@ class Pokemon {
     ]
   }
 }
+let newPokemonButton = document.getElementById('fetchSpecific')
+console.log(newPokemonButton)
 
 newPokemonButton.addEventListener('click', function() {
   createPokeCard(matchIdToImage(new Pokemon('[redacted]')))
 }
 )
 
-var card = document.querySelector('.card');
-card.addEventListener('click', function() {
-  card.classList.toggle('is-flipped');
-});
+

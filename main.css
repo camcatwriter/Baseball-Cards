@@ -10,6 +10,7 @@ body { font-family: sans-serif; }
   background-color: #3164c2;
   position: fixed;
   width: 100%;
+  z-index: 5;
 }
 nav ul li {
   justify-content: space-between;
@@ -125,13 +126,18 @@ figcaption {
     left: 0;
     width: 200px;
     position: absolute;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     z-index: -1;
+    transform: rotateY(180deg);
 
   }
   
   .infoDiv {
     text-align: center;
     padding-top: 5.25rem;
-    /* position: absolute; */
+    position: absolute;
+    bottom: 80px;
+    right: 70px;
+    transform: rotateY(180deg);
+
   }
