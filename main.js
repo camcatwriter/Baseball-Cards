@@ -2,6 +2,7 @@ import { pokemon } from './pokemon.js'
 
 const mainContainer = document.querySelector('.container')
 
+//cardFront elements and appending
 function cardFront(pokeData) {
   let cardFront = document.createElement('div')
   cardFront.className = 'card_face card_ face--front'
@@ -11,7 +12,7 @@ function cardFront(pokeData) {
   image.className = 'pokemon_image' + pokeData.name
 
   name.textContent = pokeData.name
-
+//fixing image source names
   if(pokeData.id !== 0) {
     image.src = `../images/${pokeData.imageID}${pokeData.name}.png`
 } else {
@@ -25,7 +26,7 @@ function cardFront(pokeData) {
 }
 
 
-
+//cardback elements
 function cardBackInfo(pokeData) {
   let infoDiv = document.createElement('div')
   infoDiv.className = 'infoDiv card_face card_face--back'
@@ -45,8 +46,7 @@ function cardBackInfo(pokeData) {
   
 }
 
-// let paragraph = infoDiv
-
+//fuction to make everything work on the cardback
 function cardBack(pokeData) {
   let cardinfo = cardBackInfo(pokeData)
   let cardBack = document.createElement('div')
@@ -54,12 +54,12 @@ function cardBack(pokeData) {
   backImage.className = 'backImage card_face card_face--back'
   backImage.src = `../images/pokecardBack.png`
   cardBack.className = 'card_face card_face--back'
-  // paragraph = document.querySelector('.infoDiv card_face card_face--back')
   cardBack.appendChild(cardinfo)
   cardBack.appendChild(backImage)
   return cardBack
 }
-// console.log(paragraph)
+
+//bringing front and back to a card and to main container
 function createPokeCard(pokeData){
   console.log (pokeData.id)
   let card = document.createElement('div')
@@ -75,6 +75,7 @@ function createPokeCard(pokeData){
   mainContainer.appendChild(card)
 }
 
+//allow for single fetched pokemon
 const allFetchedPokemon = []
 
 pokemon.forEach((singleMon) => {
@@ -88,6 +89,7 @@ pokemon.forEach((singleMon) => {
   })
 })
 
+//match pokemon to each image by id number
 function matchIdToImage(aPokemon) {
   if(aPokemon.id === 0) {
     aPokemon.imageID = 0
@@ -106,6 +108,7 @@ function matchIdToImage(aPokemon) {
 
 }
 
+//fetch pokemon by id function
 function fetchSinglePokemon(id) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
   .then(function(response) {
@@ -116,7 +119,7 @@ function fetchSinglePokemon(id) {
   })
 }
 
-
+//buttons and retrieved bokemon match up
 let retrievedPokemonButton = document.getElementById("fetchOriginalPokemon")
 console.log(retrievedPokemonButton)
 retrievedPokemonButton.addEventListener('click', function() {
@@ -125,6 +128,7 @@ retrievedPokemonButton.addEventListener('click', function() {
     fetchSinglePokemon(pokemonID)
 })
 
+//constructor
 class Pokemon {
   constructor (name) {
     this.id = 0,
@@ -152,9 +156,12 @@ class Pokemon {
     ]
   }
 }
+
+//new pokemon button pulling pokemon
 let newPokemonButton = document.getElementById('fetchSpecific')
 console.log(newPokemonButton)
 
+//custom object
 newPokemonButton.addEventListener('click', function() {
   createPokeCard(matchIdToImage(new Pokemon('[redacted]')))
 }
